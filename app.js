@@ -22,7 +22,7 @@ app.get("/images", async (req, res) => {
   let data;
   try {
     let resp = await axios.get(
-      `https://${process.env.API_KEY}:${process.env.API_SECRET}@api.cloudinary.com/v1_1/dqoh4lsjq/resources/search?expression="tags=lorddro1532@gmail.com"`
+      `https://${process.env.API_KEY}:${process.env.API_SECRET}@api.cloudinary.com/v1_1/${process.env.CLOUD_NAME}/resources/search?expression="tags=lorddro1532@gmail.com"`
     );
     data = resp.data;
   } catch (e) {
